@@ -1,6 +1,44 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tag specifying the character encoding of the page -->
+    <meta charset="UTF-8">
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <!-- Meta tag ensuring proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>Piano Lesson Calculator</title>
+
+    <!-- Link to the external CSS file for styling (optional) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container that holds the content -->
+    <div class="container">
+
+        <!-- Heading for the page -->
+        <h2>Piano Lesson Cost Calculator</h2>
+
+        <!-- Label and input field where the user enters the number of hours -->
+        <label for="hours">Enter Number of Hours:</label>
+        <input type="number" id="hours" min="1" placeholder="Enter hours" required>
+
+        <!-- Label and input field for displaying the hourly rate (non-editable) -->
+        <label for="rate">Hourly Rate ($):</label>
+        <input type="text" id="rate" value="25" readonly> <!-- Example rate, modify as needed -->
+        <!-- Button that triggers the calculation of the total cost -->
+        <button id="calculate">Calculate Total</button>
+
+        <!-- Label and input field to show the total cost after calculation -->
+        <label for="total">Total Cost ($):</label>
+        <input type="text" id="total" readonly>
+
+        <!-- Placeholder for displaying error messages, such as invalid input -->
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <!-- Link to the external JavaScript file (handles validation and calculation logic) -->
+    <script src="script.js"></script>
+</body>
+</html>
